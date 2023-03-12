@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GtaTestDurations xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Executable>C:\Disk D\Fall\OOP\Lab_02_OOP\Lab_02_OOP\x64\Debug\oop_lab2_test.exe</Executable>
+  <TestDurations>
+    <TestDuration Test="GetBoxVolume.HandlesNegativeInput" Duration="1" />
+    <TestDuration Test="GetBoxVolume.HandlesCorrectInput" Duration="1" />
+  </TestDurations>
+</GtaTestDurations>
