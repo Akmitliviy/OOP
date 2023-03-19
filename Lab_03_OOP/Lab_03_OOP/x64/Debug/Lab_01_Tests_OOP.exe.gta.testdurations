@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GtaTestDurations xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Executable>C:\Disk_D\Fall\OOP\Lab_03_OOP\Lab_03_OOP\x64\Debug\Lab_01_Tests_OOP.exe</Executable>
+  <TestDurations>
+    <TestDuration Test="RootsFinder.Dichotomy0000" Duration="1" />
+    <TestDuration Test="RootsFinder.Dichotomy0001" Duration="1" />
+    <TestDuration Test="RootsFinder.Dichotomy0010" Duration="1" />
+    <TestDuration Test="RootsFinder.Dichotomy0100" Duration="1" />
+    <TestDuration Test="RootsFinder.Dichotomy1000" Duration="1" />
+    <TestDuration Test="RootsFinder.Dichotomy0011" Duration="1" />
+    <TestDuration Test="RootsFinder.Dichotomy0110" Duration="1" />
+    <TestDuration Test="RootsFinder.Dichotomy1100" Duration="1" />
+    <TestDuration Test="RootsFinder.Secant0000" Duration="1" />
+    <TestDuration Test="RootsFinder.Secant0001" Duration="1" />
+    <TestDuration Test="RootsFinder.Secant0010" Duration="1" />
+    <TestDuration Test="RootsFinder.Secant0100" Duration="1" />
+    <TestDuration Test="RootsFinder.Secant1000" Duration="1" />
+    <TestDuration Test="RootsFinder.Secant0011" Duration="1" />
+    <TestDuration Test="RootsFinder.Secant0110" Duration="1" />
+    <TestDuration Test="RootsFinder.Secant1100" Duration="1" />
+  </TestDurations>
+</GtaTestDurations>
