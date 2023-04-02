@@ -247,14 +247,14 @@ TEST(CPolynom4, MutatorHandlesFloatInput) {
 	ASSERT_TRUE(input.c == polynom2.GetPolynom().c);
 	ASSERT_TRUE(input.d == polynom2.GetPolynom().d);
 }
-
-TEST(CPolynom4, GetResultZero) {
-	CPolynom4 polynom(0, 0, 0, 0);
-	EXPECT_DOUBLE_EQ(polynom.GetResult(5), 0);
-	EXPECT_DOUBLE_EQ(polynom.GetResult(36.2346), 0);
-	EXPECT_DOUBLE_EQ(polynom.GetResult(0), 0);
-	EXPECT_DOUBLE_EQ(polynom.GetResult(-34534.23), 0);
-}
+//
+//TEST(CPolynom4, GetResultZero) {
+//	CPolynom4 polynom(0, 0, 0, 0);
+//	EXPECT_DOUBLE_EQ(polynom.GetResult(5), 0);
+//	EXPECT_DOUBLE_EQ(polynom.GetResult(36.2346), 0);
+//	EXPECT_DOUBLE_EQ(polynom.GetResult(0), 0);
+//	EXPECT_DOUBLE_EQ(polynom.GetResult(-34534.23), 0);
+//}
 
 TEST(CPolynom4, GetResultNormal) {
 	CPolynom4 polynom(1, -4, -7, 10);
@@ -308,4 +308,14 @@ TEST(CPolynom4, GetRootsHandlesZero) {
 	EXPECT_TRUE(fabs(polynom.GetRoots(-23, 13, 0.0000000001).roots[0] - 5) <= 0.0000000001);
 	EXPECT_TRUE(fabs(polynom.GetRoots(-23, 13, 0.0000000001).roots[1] - 1) <= 0.0000000001);
 	EXPECT_TRUE(fabs(polynom.GetRoots(-23, 13, 0.0000000001).roots[2] - (-2)) <= 0.0000000001);
+}
+
+
+
+//////////////////////////////////////////////////
+
+
+TEST(CPolynom4, A_Is_Zero) {
+	
+	EXPECT_DEATH(CPolynom4 pol(0, 4, 5, 6), "a > 0");
 }

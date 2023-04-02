@@ -1,8 +1,10 @@
 #include <iostream>
+#include <cassert>
 #include "PolynomHeader.h"
 
 
     CPolynom4::CPolynom4(double a, double b, double c, double d) {
+        assert(a > 0);
         polynom.a = a;
         polynom.b = b;
         polynom.c = c;

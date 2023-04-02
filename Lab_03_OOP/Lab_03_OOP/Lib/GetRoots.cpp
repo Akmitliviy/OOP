@@ -34,7 +34,6 @@ int RootsFinder::D(SPolynom pol) {
         ldouble r = pol.b / pol.a, s = pol.c / pol.a, t = pol.d / pol.a;
         ldouble p = (3 * s - r * r) / 3, q = (2 * r * r * r) / 27 - r * s / 3 + t;
         D = p * p * p / 27 + q * q / 4;
-        //D = ((18 * pol.a * pol.b * pol.b * pol.c) - (4 * pol.b * pol.b * pol.b * pol.d) + (pol.b * pol.b * pol.c * pol.c) - (4 * pol.a * pol.c * pol.c * pol.c) - (27 * pol.a * pol.a * pol.d * pol.d));
         if (D > 0)
             result = 1;
         else if (fabs(D) < 0.000000000000001)
