@@ -1,0 +1,5 @@
+﻿  Table_Functions.cpp
+C:\Disk_D\Fall\OOP\Lab_05_OOP\Lab_05_OOP\Lab_05_OOP\Table_Functions.cpp(69,2): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Disk_D\Fall\OOP\Lab_05_OOP\Lab_05_OOP\Lab_05_OOP\Table_Functions.cpp(73,2): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Disk_D\Fall\OOP\Lab_05_OOP\Lab_05_OOP\Lab_05_OOP\Table_Functions.cpp(217): warning C4715: 'operator>>': not all control paths return a value
+  Lab_05_OOP.vcxproj -> C:\Disk_D\Fall\OOP\Lab_05_OOP\Lab_05_OOP\x64\Debug\Lab_05_OOP.exe

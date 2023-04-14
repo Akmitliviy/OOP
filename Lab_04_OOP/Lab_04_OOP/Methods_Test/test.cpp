@@ -6,6 +6,16 @@ pol_3{ 0, 0, 0, 0 },
 pol_4{ -2346.2346, -2087.5473, -2326.5428, -23873.45372 }, 
 pol_5{ 1'000'000'000'000, 1'000'000'000'000, 1'000'000'000'000, 1'000'000'000'000 };
 
+TEST(CPolynom4Test, Number_of_objects) {
+	CPolynom4 p1(pol_1);
+	CPolynom4 p2(pol_2);
+	CPolynom4 p3(pol_3);
+	CPolynom4 p4(pol_4);
+
+	int number_of_objects = CPolynom4::GetNumOfObjects();
+	EXPECT_EQ(number_of_objects, 4);
+}
+
 TEST(Plus, HandlesNormalInput) {
 	CPolynom4 C1(pol_1), C2(pol_2), Sum;
 

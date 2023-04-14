@@ -1,17 +1,24 @@
 #include <iostream>
 #include "Polynom_Header.h"
 
+int CPolynom4::number_of_objects{ 0 };
 
 CPolynom4::CPolynom4(double a, double b, double c, double d) {
+    number_of_objects++;
+
     polynom.a = a;
     polynom.b = b;
     polynom.c = c;
     polynom.d = d;
 }
 CPolynom4::CPolynom4(SPolynom polynom) {
+    number_of_objects++;
+
     this->polynom = polynom;
 }
 CPolynom4::CPolynom4() {
+    number_of_objects++;
+
     this->polynom.a = 1;
     this->polynom.b = 1;
     this->polynom.c = 1;
@@ -158,3 +165,4 @@ ldouble& CPolynom4::operator [](int index) {
         }
     }
 }
+

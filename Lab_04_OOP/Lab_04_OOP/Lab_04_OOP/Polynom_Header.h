@@ -4,6 +4,7 @@
 
 class  CPolynom4 {
 private:
+    static int number_of_objects;
     SPolynom polynom;
 public:
     CPolynom4(double a, double b, double c, double d);
@@ -20,6 +21,10 @@ public:
     SPolynom GetPolynom();
     void SetPolynom(ldouble a, ldouble b, ldouble c, ldouble d);
     void SetPolynom(SPolynom polynom);
+
+    static int GetNumOfObjects() {
+        return number_of_objects;
+    }
 
     CPolynom4 operator + (const CPolynom4& other);
     CPolynom4 operator - (const CPolynom4& other);
