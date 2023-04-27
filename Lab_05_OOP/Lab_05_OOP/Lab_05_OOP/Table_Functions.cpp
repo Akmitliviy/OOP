@@ -6,6 +6,7 @@ CTable::CTable(CTable&& rr_other) noexcept : max_size_of_column(rr_other.max_siz
 	this->columns_name = rr_other.columns_name;
 	rr_other.table = nullptr;
 
+
 };
 CTable::CTable(CTable& r_other) : max_size_of_column(r_other.max_size_of_column), number_of_columns(r_other.number_of_columns) {
 	vector<variant<int, double, char, string>>* new_table = new vector<variant<int, double, char, string>>[number_of_columns];
@@ -60,74 +61,130 @@ ostream& operator<<(ostream& os, const CTable& c_table) {
 			else break;
 		}
 
-		os << endl;
+		os << endl; 
 	}
+
+	os << endl;
 	return os;
 }
-
 istream& operator>> (istream& is, CTable& c_table) {
 	c_table.number_of_columns = 0;
 
-	 cout << "Enter number of columns: ";
-	 is >> c_table.number_of_columns;
-	 cout << endl;
+	cout << "Enter number of columns: ";
+	is >> c_table.number_of_columns;
+	cout << endl;
 
-	 if (c_table.number_of_columns <= 0) {
-		 c_table.number_of_columns = 0;
-		 return is;
-	 }
+	if (c_table.number_of_columns <= 0) {
+		c_table.number_of_columns = 0;
+		return is;
+	}
 
-	 if (c_table.table != nullptr)
-		 delete[] c_table.table;
+	if (c_table.table != nullptr)
+		delete[] c_table.table;
 
-	 c_table.table = new vector<variant<int, double, char, string>>[c_table.number_of_columns];
-	 c_table.columns_name.clear();
-	 c_table.columns_name.resize(c_table.number_of_columns);
-	 c_table.max_size_of_column = 0;
+	c_table.table = new vector<variant<int, double, char, string>>[c_table.number_of_columns];
+	c_table.columns_name.clear();
+	c_table.columns_name.resize(c_table.number_of_columns);
+	c_table.max_size_of_column = 0;
 
-	 int num_of_elements{ 0 };
-	 string type{ 0 };
-	 for (int i = 0; i < c_table.number_of_columns; i++) {
-		 cout << "\n\nEnter number of elements in " << i + 1 << "column: ";
-		 is >> num_of_elements;
-		 cout << endl;
+	int num_of_elements{ 0 };
+	string type{ 0 };
+	for (int i = 0; i < c_table.number_of_columns; i++) {
+		cout << "\n\nEnter number of elements in " << i + 1 << "column: ";
+		is >> num_of_elements;
+		cout << endl;
 
-		 if (c_table.max_size_of_column < num_of_elements)
-			 c_table.max_size_of_column = num_of_elements;
+		if (c_table.max_size_of_column < num_of_elements)
+			c_table.max_size_of_column = num_of_elements;
 
-		 cout << "Enter type of elements in this column: ";
-		 is >> type;
-		 cout << endl;
+		cout << "Enter type of elements in this column: ";
+		is >> type;
+		cout << endl;
 
-		 c_table.table[i].resize(num_of_elements);
+		c_table.table[i].resize(num_of_elements);
 
-		 if (type == "int" || type == "Int" || type == "INT" || type == "Int32") {
-			 int foo{ 0 };
-			 c_table.GetNewColumn(foo, i, is);
-		 }
-		 else if (type == "double" || type == "Double" || type == "DOUBLE") {
-			 double foo{ 0 };
-			 c_table.GetNewColumn(foo, i, is);
-		 }
-		 else if (type == "char" || type == "Char" || type == "CHAR") {
-			 char foo{ 0 };
-			 c_table.GetNewColumn(foo, i, is);
-		 }
-		 else if (type == "string" || type == "String" || type == "STRING") {
-			 string foo{"\0"};
-			 c_table.GetNewColumn(foo, i, is);
-		 }
-		 else {
-			 cout << "\n\nWrong type, try again: \n\n";
-			 i--;
-			 continue;
-		 }
+		if (type == "int" || type == "Int" || type == "INT" || type == "Int32") {
+			int foo{ 0 };
+			c_table.GetNewColumn(foo, i, is);
+		}
+		else if (type == "double" || type == "Double" || type == "DOUBLE") {
+			double foo{ 0 };
+			c_table.GetNewColumn(foo, i, is);
+		}
+		else if (type == "char" || type == "Char" || type == "CHAR") {
+			char foo{ 0 };
+			c_table.GetNewColumn(foo, i, is);
+		}
+		else if (type == "string" || type == "String" || type == "STRING") {
+			string foo{ "\0" };
+			c_table.GetNewColumn(foo, i, is);
+		}
+		else {
+			cout << "\n\nWrong type, try again: \n\n";
+			i--;
+			continue;
+		}
 
-		 c_table.columns_name[i] = type;
-		 num_of_elements = 0;
-	 }
+		c_table.columns_name[i] = type;
+		num_of_elements = 0;
+	}
 
-	 cout << endl << endl;
+	cout << endl << endl;
+}
+CTable& CTable::operator= (const CTable& c_table) {
+	this->max_size_of_column = c_table.max_size_of_column;
+	this->number_of_columns = c_table.number_of_columns;
+
+	vector<variant<int, double, char, string>>* new_table = new vector<variant<int, double, char, string>>[this->number_of_columns];
+
+	for (int i = 0; i < this->number_of_columns; i++) {
+		new_table[i] = c_table.table[i];
+	}
+	if (this->table != nullptr)
+		delete[] this->table;
+
+	this->columns_name = c_table.columns_name;
+	this->table = new_table;
+
+	return *this;
+}
+CTable CTable::operator+(const CTable& r_other) {
+	CTable c_result_table;
+
+	c_result_table.table = new vector<variant<int, double, char, string>>[number_of_columns];
+
+	int i = 0;
+	for (int j = 0; j < this->number_of_columns; j++, i++) {
+		c_result_table.AddColumn(this->table[j]);
+		c_result_table.columns_name.push_back(this->columns_name[j]);
+	}
+
+	i--;
+	for (int j = 0; j < r_other.number_of_columns; j++, i++) {
+		c_result_table.AddColumn(r_other.table[j]);
+		c_result_table.columns_name.push_back(r_other.columns_name[j]);
+	}
+
+	return c_result_table;
+}
+CTable CTable::operator*(const CTable& r_other) {
+
+	CTable additional_table;
+
+	for (int i = 0; i < r_other.number_of_columns; i++) {
+		for (int j = 0; j < r_other.table[i].size(); j++) {
+			vector<variant<int, double, char, string>> new_column;
+			for (int k = 0; k < this->max_size_of_column; k++) {
+				new_column.push_back(r_other.table[i][j]);
+			}
+
+			additional_table.AddColumn(new_column);
+			additional_table.columns_name.push_back(r_other.columns_name[i]);
+			new_column.clear();
+		}
+	}
+
+	return *this + additional_table;
 }
 
 void CTable::ShowTable() const {
@@ -168,19 +225,15 @@ void CTable::ShowTable() const {
 	}
 
 }
-
 int CTable::GetNumOfColumns() const{
 	return number_of_columns;
 }
-
 int CTable::GetNumOfRows() const{
 	return max_size_of_column;
 }
-
 string CTable::GetNameOfColumn(int index) const {
 	return columns_name[index];
 }
-
 string CTable::GetTypeOfColumn(int index) const {
 	string result = "unknown";
 
@@ -212,6 +265,9 @@ void CTable::AddColumn(vector<variant<int, double, char, string>> column) {
 		new_table[i] = table[i];
 	}
 	new_table[i] = column;
+
+	if (column.size() > max_size_of_column)
+		max_size_of_column = column.size();
 	
 	if (this->table != nullptr)
 		delete[] table;

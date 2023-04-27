@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab_05_OOP", "Lab_05_OOP\Lab_05_OOP.vcxproj", "{8BF066EE-8D14-4A1B-9DFF-AD526226D325}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GoogleTests_CTable", "GoogleTests_CTable\GoogleTests_CTable.vcxproj", "{F2C2A4B3-4BB4-45CA-9C9C-8857AD1052C0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{8BF066EE-8D14-4A1B-9DFF-AD526226D325}.Release|x64.Build.0 = Release|x64
 		{8BF066EE-8D14-4A1B-9DFF-AD526226D325}.Release|x86.ActiveCfg = Release|Win32
 		{8BF066EE-8D14-4A1B-9DFF-AD526226D325}.Release|x86.Build.0 = Release|Win32
+		{F2C2A4B3-4BB4-45CA-9C9C-8857AD1052C0}.Debug|x64.ActiveCfg = Debug|x64
+		{F2C2A4B3-4BB4-45CA-9C9C-8857AD1052C0}.Debug|x64.Build.0 = Debug|x64
+		{F2C2A4B3-4BB4-45CA-9C9C-8857AD1052C0}.Debug|x86.ActiveCfg = Debug|Win32
+		{F2C2A4B3-4BB4-45CA-9C9C-8857AD1052C0}.Debug|x86.Build.0 = Debug|Win32
+		{F2C2A4B3-4BB4-45CA-9C9C-8857AD1052C0}.Release|x64.ActiveCfg = Release|x64
+		{F2C2A4B3-4BB4-45CA-9C9C-8857AD1052C0}.Release|x64.Build.0 = Release|x64
+		{F2C2A4B3-4BB4-45CA-9C9C-8857AD1052C0}.Release|x86.ActiveCfg = Release|Win32
+		{F2C2A4B3-4BB4-45CA-9C9C-8857AD1052C0}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

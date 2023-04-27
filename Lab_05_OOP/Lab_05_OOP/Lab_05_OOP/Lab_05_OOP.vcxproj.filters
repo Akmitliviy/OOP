@@ -21,9 +21,15 @@
     <ClCompile Include="Table_Functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Table_Functions_Unique.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Table_Header.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Table_Header_Unique.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -9,7 +9,7 @@ using namespace std;
 class CTable {
 
 	size_t number_of_columns;
-	vector<variant<int, double, char, string>>* table = new vector<variant<int, double, char, string>>[number_of_columns];
+	vector<variant<int, double, char, string>>* table{nullptr};
 	vector<string> columns_name;
 	size_t max_size_of_column; 
 
@@ -32,8 +32,11 @@ public:
 	CTable(CTable&& rr_other) noexcept;
 	~CTable();
 
-	friend ostream& operator<< (ostream& os, const CTable& c_table);
-	friend istream& operator>> (istream& os, CTable& c_table);
+	CTable& operator= (const CTable& r_other);
+	friend ostream& operator<< (ostream& os, const CTable& r_other);
+	friend istream& operator>> (istream& os, CTable& r_other);
+	CTable operator+(const CTable& r_other);
+	CTable operator*(const CTable& r_other);
 
 	template <class T>
 	void CreateNewColumn(T arr[], size_t number_of_elements, string column_name) {
@@ -49,7 +52,6 @@ public:
 
 		columns_name.push_back(column_name);
 	}
-	
 	template<class T>
 	T GetValueOfTable(int column, int row) const {
 		T result{ 0 };
