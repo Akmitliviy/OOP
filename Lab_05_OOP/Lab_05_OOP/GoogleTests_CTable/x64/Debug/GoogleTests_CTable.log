@@ -1,1 +1,3 @@
-﻿  GoogleTests_CTable.vcxproj -> C:\Disk_D\Fall\OOP\Lab_05_OOP\Lab_05_OOP\x64\Debug\GoogleTests_CTable.exe
+﻿  pch.cpp
+  test.cpp
+  GoogleTests_CTable.vcxproj -> C:\Disk_D\Fall\OOP\Lab_05_OOP\Lab_05_OOP\x64\Debug\GoogleTests_CTable.exe
