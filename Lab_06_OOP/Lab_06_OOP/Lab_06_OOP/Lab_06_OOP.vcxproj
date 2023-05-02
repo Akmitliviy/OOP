@@ -129,10 +129,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CCar.cpp" />
+    <ClCompile Include="CMotorcycle.cpp" />
+    <ClCompile Include="CTruck.cpp" />
+    <ClCompile Include="CVehicle.cpp" />
     <ClCompile Include="Lab_06_OOP.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Header_Lab_06.h" />
+    <ClInclude Include="CCar.h" />
+    <ClInclude Include="CMotorcycle.h" />
+    <ClInclude Include="CTruck.h" />
+    <ClInclude Include="CVehicle.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

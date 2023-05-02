@@ -1,22 +1,12 @@
-#include "Header_Lab_06.h"
+#include "CVehicle.h"
+#include "CCar.h"
+#include "CTruck.h"
+#include "CMotorcycle.h"
 
-double CCar::max_weight = 2'510;
-double CCar::base_weight = 1'100;
-double CCar::crub_weight_distance = 288;
-double CCar::price_for_service = 137.41;
+int main()
+{
 
-double CTruck::max_weight = 27'215.5;
-double CTruck::base_weight = 18'000;
-double CTruck::crub_weight_distance = 800;
-double CTruck::price_for_service = 659;
-
-double CMotorcycle::max_weight = 292;
-double CMotorcycle::base_weight = 216;
-double CMotorcycle::crub_weight_distance = 90;
-double CMotorcycle::price_for_service = 346;
-
-//int main()
-//{
+	CVehicle::
 //
 //    CCar porsche("Porsсhe", 2'000);
 //    porsche.PrintName();
@@ -42,4 +32,6 @@ double CMotorcycle::price_for_service = 346;
 //    kawasaki.PrintMaxWeight();
 //    kawasaki.PrintPriceForService();
 //
-//}
+	return 0;
+}
+

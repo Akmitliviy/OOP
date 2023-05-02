@@ -1,2 +1,3 @@
-﻿  test.cpp
+﻿  pch.cpp
+  test.cpp
   GoogleTests_Lab_06.vcxproj -> C:\Disk_D\Fall\OOP\Lab_06_OOP\Lab_06_OOP\x64\Debug\GoogleTests_Lab_06.exe
