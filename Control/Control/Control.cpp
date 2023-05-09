@@ -2,122 +2,61 @@
 
 using namespace std;
 
-class CVector;
-
-int ReturnIntValue(const CVector& vector) {
-    return vector.m_size;
-}
-
-class CVector {
-public:
-    CVector() = delete;
-    CVector(const size_t size) {
-        m_size = size;
-        m_vector = new double[m_size];
-
-        for (int i = 0; i < m_size; i++)
-            m_vector[i] = 0;
-    }
-    CVector(const double* arr, const size_t size) {
-
-        m_size = size;
-        m_vector = new double[m_size];
-        for (int i = 0; i < m_size; i++) {
-
-            m_vector[i] = arr[i];
-        }
-    }
-    CVector(const CVector& other) {
-
-        this->m_size = other.m_size;
-        this->m_vector = new double[this->m_size];
-        for (int i = 0; i < m_size; i++) {
-            this->m_vector[i] = other.m_vector[i];
-        }
-    }
-    ~CVector() {
-
-        m_size = 0;
-        if (m_vector) {
-            delete[] m_vector;
-            m_vector = nullptr;
-        }
-    }
-
-    CVector& operator=(const CVector& other) {
-
-        this->m_size = other.m_size;
-        
-        if (this->m_vector) {
-            delete[] this->m_vector;
-            this->m_vector = nullptr;
-        }
-
-        this->m_vector = new double[this->m_size];
-        for (int i = 0; i < m_size; i++) {
-            this->m_vector[i] = other.m_vector[i];
-        }
-
-        return *this;
-    }
-    CVector operator+(const CVector& other) {
-        const size_t size = this->m_size + other.m_size;
-
-        double* temp_vec = new double[size];
-
-        for (int i = 0; i < this->m_size; i++) {
-            temp_vec[i] = this->m_vector[i];
-        }
-
-        for (int i = 0; i < other.m_size; i++) {
-            temp_vec[this->m_size + i] = other.m_vector[i];
-        }
-
-        CVector temp(temp_vec, size);
-
-        return temp;
-    }
-    operator double() {
-        return m_size;
-    }
-    friend int ReturnIntValue(const CVector& vector);
-
-    void PrintVector() {
-
-        for (int i = 0; i < m_size; i++) {
-
-            cout << m_vector[i] << "\t";
-        }
-        cout << endl << endl;
-    }
-
-private:
-    size_t m_size;
-    double* m_vector;
-};
-
 int main() {
-    int a{ 0 }, b{ 8 }, c;
+	int sum = 6;
+	for (int i = 0; i < 2; i++) {
+		if (i == 0)
+			sum += 3;
+		else
+			sum -= 3;
 
-    c = a + b;
-    
+		for (int j = 0; j < 2; j++) {
+			if (j == 0)
+				sum += 4;
+			else
+				sum -= 4;
 
-    cout << double(b);
+			for (int k = 0; k < 2; k++) {
+				if (k == 0)
+					sum += 2;
+				else
+					sum -= 2;
 
+				for (int l = 0; l < 2; l++) {
 
+					if (l == 0)
+						sum += 6;
+					else
+						sum -= 6;
 
-    CVector vector(5);
-    const size_t size = 8;
-    double arr[size] = { 4,6,3,6,2,1,3,9 };
+						cout << "Result is " << sum << "\n\n";
+						cout << "i = " << i << endl;
+						cout << "j = " << j << endl;
+						cout << "k = " << k << endl;
+						cout << "l = " << l << endl;
+						cout << endl << endl << endl << endl;
 
-    CVector vector1(arr, size);
-    for (int i = 0; i < 8; i++) {
+						if (l == 0)
+							sum -= 6;
+						else
+							sum += 6;
 
-        cout << "Exelent";
-        CVector vector3(100000000);
-    }
-    CVector vector4(vector1);
-    vector.PrintVector();
-    vector1.PrintVector();
-    return 0;
+				}
+				if (k == 0)
+					sum -= 2;
+				else
+					sum += 2;
+			}
+			if (j == 0)
+				sum -= 4;
+			else
+				sum += 4;
+		}
+		if (i == 0)
+			sum -= 3;
+		else
+			sum += 3;
+	}
+
+	return 0;
 }
