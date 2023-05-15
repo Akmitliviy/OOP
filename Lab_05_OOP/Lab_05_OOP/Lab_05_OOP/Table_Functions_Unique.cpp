@@ -128,6 +128,7 @@ istream& operator>> (istream& is, CTable& c_table) {
 	}
 
 	cout << endl << endl;
+	return is;
 }
 CTable& CTable::operator= (const CTable& c_table) {
 	this->max_size_of_column = c_table.max_size_of_column;
