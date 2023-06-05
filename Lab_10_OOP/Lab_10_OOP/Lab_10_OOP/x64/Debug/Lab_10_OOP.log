@@ -1,0 +1,22 @@
+﻿  Lab_10_OOP.cpp
+C:\Disk_D\Fall\OOP\Lab_10_OOP\Lab_10_OOP\Lab_10_OOP\Table_Header_Unique.h(108,29): warning C4101: 'ex': unreferenced local variable
+C:\Disk_D\Fall\OOP\Lab_10_OOP\Lab_10_OOP\Lab_10_OOP\Table_Header_Unique.h(89,1): message : while compiling class template member function 'std::ostream &operator <<(std::ostream &,const CTable<char> &)'
+C:\Disk_D\Fall\OOP\Lab_10_OOP\Lab_10_OOP\Lab_10_OOP\Lab_10_OOP.cpp(47,7): message : see reference to function template instantiation 'std::ostream &operator <<(std::ostream &,const CTable<char> &)' being compiled
+C:\Disk_D\Fall\OOP\Lab_10_OOP\Lab_10_OOP\Lab_10_OOP\Lab_10_OOP.cpp(9,15): message : see reference to class template instantiation 'CTable<char>' being compiled
+C:\Disk_D\Fall\OOP\Lab_10_OOP\Lab_10_OOP\Lab_10_OOP\Table_Header_Unique.h(281,27): warning C4101: 'ex': unreferenced local variable
+C:\Disk_D\Fall\OOP\Lab_10_OOP\Lab_10_OOP\Lab_10_OOP\Table_Header_Unique.h(275,1): message : while compiling class template member function 'std::string CTable<int>::GetNameOfColumn(int) const'
+C:\Disk_D\Fall\OOP\Lab_10_OOP\Lab_10_OOP\Lab_10_OOP\Lab_10_OOP.cpp(49,120): message : see reference to function template instantiation 'std::string CTable<int>::GetNameOfColumn(int) const' being compiled
+C:\Disk_D\Fall\OOP\Lab_10_OOP\Lab_10_OOP\Lab_10_OOP\Lab_10_OOP.cpp(7,14): message : see reference to class template instantiation 'CTable<int>' being compiled
+C:\Disk_D\Fall\OOP\Lab_10_OOP\Lab_10_OOP\Lab_10_OOP\Table_Header_Unique.h(243,20): warning C4834: discarding return value of function with 'nodiscard' attribute
+C:\Disk_D\Fall\OOP\Lab_10_OOP\Lab_10_OOP\Lab_10_OOP\Table_Header_Unique.h(240,1): message : while compiling class template member function 'T CTable<T>::GetValueOfTable(int,int) const'
+          with
+          [
+              T=int
+          ]
+C:\Disk_D\Fall\OOP\Lab_10_OOP\Lab_10_OOP\Lab_10_OOP\Lab_10_OOP.cpp(51,8): message : see reference to function template instantiation 'T CTable<T>::GetValueOfTable(int,int) const' being compiled
+          with
+          [
+              T=int
+          ]
+C:\Disk_D\Fall\OOP\Lab_10_OOP\Lab_10_OOP\Lab_10_OOP\Table_Header_Unique.h(246,27): warning C4101: 'issue': unreferenced local variable
+  Lab_10_OOP.vcxproj -> C:\Disk_D\Fall\OOP\Lab_10_OOP\Lab_10_OOP\x64\Debug\Lab_10_OOP.exe

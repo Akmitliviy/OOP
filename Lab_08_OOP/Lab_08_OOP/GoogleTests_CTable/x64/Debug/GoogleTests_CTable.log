@@ -1,0 +1,15 @@
+﻿  pch.cpp
+  test.cpp
+C:\Disk_D\Fall\OOP\Lab_08_OOP\Lab_08_OOP\Lab_08_OOP\Table_Header_Unique.h(67,27): warning C4101: 'ex': unreferenced local variable
+C:\Disk_D\Fall\OOP\Lab_08_OOP\Lab_08_OOP\GoogleTests_CTable\test.cpp(27,45): message : see reference to function template instantiation 'void CTable::CreateNewColumn<int>(T [],size_t,std::string)' being compiled
+          with
+          [
+              T=int
+          ]
+C:\Disk_D\Fall\OOP\Lab_08_OOP\Lab_08_OOP\Lab_08_OOP\Table_Header_Unique.h(77,20): warning C4834: discarding return value of function with 'nodiscard' attribute
+C:\Disk_D\Fall\OOP\Lab_08_OOP\Lab_08_OOP\GoogleTests_CTable\test.cpp(95,42): message : see reference to function template instantiation 'T CTable::GetValueOfTable<double>(int,int) const' being compiled
+          with
+          [
+              T=double
+          ]
+  GoogleTests_CTable.vcxproj -> C:\Disk_D\Fall\OOP\Lab_08_OOP\Lab_08_OOP\x64\Debug\GoogleTests_CTable.exe

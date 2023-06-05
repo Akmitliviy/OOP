@@ -1,0 +1,21 @@
+﻿  Lab_09_OOP.cpp
+C:\Disk_D\Fall\OOP\Lab_09_OOP\Lab_09_OOP\Lab_09_OOP\Table_Header_Unique.h(297,27): warning C4101: 'ex': unreferenced local variable
+C:\Disk_D\Fall\OOP\Lab_09_OOP\Lab_09_OOP\Lab_09_OOP\Table_Header_Unique.h(291,1): message : while compiling class template member function 'std::string CTable<int>::GetNameOfColumn(int) const'
+C:\Disk_D\Fall\OOP\Lab_09_OOP\Lab_09_OOP\Lab_09_OOP\Lab_09_OOP.cpp(45,120): message : see reference to function template instantiation 'std::string CTable<int>::GetNameOfColumn(int) const' being compiled
+C:\Disk_D\Fall\OOP\Lab_09_OOP\Lab_09_OOP\Lab_09_OOP\Lab_09_OOP.cpp(7,14): message : see reference to class template instantiation 'CTable<int>' being compiled
+C:\Disk_D\Fall\OOP\Lab_09_OOP\Lab_09_OOP\Lab_09_OOP\Table_Header_Unique.h(252,20): warning C4834: discarding return value of function with 'nodiscard' attribute
+C:\Disk_D\Fall\OOP\Lab_09_OOP\Lab_09_OOP\Lab_09_OOP\Table_Header_Unique.h(249,1): message : while compiling class template member function 'T CTable<T>::GetValueOfTable(int,int) const'
+          with
+          [
+              T=int
+          ]
+C:\Disk_D\Fall\OOP\Lab_09_OOP\Lab_09_OOP\Lab_09_OOP\Lab_09_OOP.cpp(47,8): message : see reference to function template instantiation 'T CTable<T>::GetValueOfTable(int,int) const' being compiled
+          with
+          [
+              T=int
+          ]
+C:\Disk_D\Fall\OOP\Lab_09_OOP\Lab_09_OOP\Lab_09_OOP\Table_Header_Unique.h(255,27): warning C4101: 'issue': unreferenced local variable
+C:\Disk_D\Fall\OOP\Lab_09_OOP\Lab_09_OOP\Lab_09_OOP\Table_Header_Unique.h(132,29): warning C4101: 'ex': unreferenced local variable
+C:\Disk_D\Fall\OOP\Lab_09_OOP\Lab_09_OOP\Lab_09_OOP\Table_Header_Unique.h(114,1): message : while compiling class template member function 'std::ostream &operator <<(std::ostream &,const CTable<int> &)'
+C:\Disk_D\Fall\OOP\Lab_09_OOP\Lab_09_OOP\Lab_09_OOP\Lab_09_OOP.cpp(41,7): message : see reference to function template instantiation 'std::ostream &operator <<(std::ostream &,const CTable<int> &)' being compiled
+  Lab_09_OOP.vcxproj -> C:\Disk_D\Fall\OOP\Lab_09_OOP\Lab_09_OOP\x64\Debug\Lab_09_OOP.exe

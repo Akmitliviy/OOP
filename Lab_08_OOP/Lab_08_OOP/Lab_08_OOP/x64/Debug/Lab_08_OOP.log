@@ -1,0 +1,27 @@
+﻿  Lab_08_OOP.cpp
+C:\Disk_D\Fall\OOP\Lab_08_OOP\Lab_08_OOP\Lab_08_OOP\Table_Header_Unique.h(67,27): warning C4101: 'ex': unreferenced local variable
+C:\Disk_D\Fall\OOP\Lab_08_OOP\Lab_08_OOP\Lab_08_OOP\Lab_08_OOP.cpp(16,44): message : see reference to function template instantiation 'void CTable::CreateNewColumn<int>(T [],size_t,std::string)' being compiled
+          with
+          [
+              T=int
+          ]
+C:\Disk_D\Fall\OOP\Lab_08_OOP\Lab_08_OOP\Lab_08_OOP\Table_Header_Unique.h(77,20): warning C4834: discarding return value of function with 'nodiscard' attribute
+C:\Disk_D\Fall\OOP\Lab_08_OOP\Lab_08_OOP\Lab_08_OOP\Lab_08_OOP.cpp(43,47): message : see reference to function template instantiation 'T CTable::GetValueOfTable<std::string>(int,int) const' being compiled
+          with
+          [
+              T=std::string
+          ]
+  Table_Functions_Unique.cpp
+C:\Disk_D\Fall\OOP\Lab_08_OOP\Lab_08_OOP\Lab_08_OOP\Table_Functions_Unique.cpp(11,3): warning C4297: 'CTable::CTable': function assumed not to throw an exception but does
+C:\Disk_D\Fall\OOP\Lab_08_OOP\Lab_08_OOP\Lab_08_OOP\Table_Functions_Unique.cpp(11,3): message : __declspec(nothrow), throw(), noexcept(true), or noexcept was specified on the function
+C:\Disk_D\Fall\OOP\Lab_08_OOP\Lab_08_OOP\Lab_08_OOP\Table_Functions_Unique.cpp(257,2): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Disk_D\Fall\OOP\Lab_08_OOP\Lab_08_OOP\Lab_08_OOP\Table_Functions_Unique.cpp(260,2): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Disk_D\Fall\OOP\Lab_08_OOP\Lab_08_OOP\Lab_08_OOP\Table_Functions_Unique.cpp(269,26): warning C4101: 'ex': unreferenced local variable
+C:\Disk_D\Fall\OOP\Lab_08_OOP\Lab_08_OOP\Lab_08_OOP\Table_Header_Unique.h(27,29): warning C4101: 'ex': unreferenced local variable
+C:\Disk_D\Fall\OOP\Lab_08_OOP\Lab_08_OOP\Lab_08_OOP\Table_Functions_Unique.cpp(127,35): message : see reference to function template instantiation 'void CTable::GetNewColumn<int>(T,int,std::istream &)' being compiled
+          with
+          [
+              T=int
+          ]
+  Generating Code...
+  Lab_08_OOP.vcxproj -> C:\Disk_D\Fall\OOP\Lab_08_OOP\Lab_08_OOP\x64\Debug\Lab_08_OOP.lib
